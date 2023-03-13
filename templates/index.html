@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="{{url_for('static',filename = 'style.css')}}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Crop Prediction</div>
+    <div class="content">
+      <form action="/predict" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Nitrogen</span>
+            <input type="text" name="Nitrogen"placeholder="Enter the Nitrogen value" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phosphorus</span>
+            <input type="text" name="phosphorus"placeholder="Enter the Phosphorus value" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Potassium</span>
+            <input type="text" name="potassium"placeholder="Enter the Potassium value" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Temperature</span>
+            <input type="text" name="temperature"placeholder="Enter the Temperature value" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Humidity</span>
+            <input type="text" name="humidity"placeholder="Enter the Humidity value" required>
+          </div>
+          <div class="input-box">
+            <span class="details">pH</span>
+            <input type="text" name="ph"placeholder="Enter the pH value" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Rainfall</span>
+            <input type="text" name="rainfall"placeholder="Enter the Rainfall value" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <span class="gender-title">Crop</span>
+          {{result}}
+        </div>
+        <div class="button">
+          <input type="submit" value="Predict">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
